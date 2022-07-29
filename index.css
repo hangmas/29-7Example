@@ -1,0 +1,194 @@
+
+html{
+    height: 100%;
+}
+body{
+    display: flex;
+    width: 95%;
+    /* min-height: 100%; */
+    margin: 0 auto;
+    flex-flow: row wrap;
+}
+
+body > header{
+    background-color: cadetblue;
+    height: 100px;
+}
+
+body > header > span, body > footer > span{
+    padding: 6px;
+}
+
+body > footer{
+    background-color: cadetblue;
+    height: 40px;
+}
+
+
+
+body > article{
+    background-color: burlywood;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: 30px 30px 350px 30px;
+}
+
+body > aside{
+    background-color: coral;
+    padding: 4px;
+    margin: 0;
+}
+
+article > section{
+    border: dashed red;
+    flex: 0 1 25%;
+    padding: 10px;
+}
+
+header > nav{
+    min-height: 40px;
+    background-color: gainsboro;
+    display: flex;
+    text-align: center;
+} 
+
+
+
+
+@media only screen and (max-width:480px) {
+    body{
+        flex-flow: column nowrap;
+    }
+
+    header > nav{
+        margin-top: 28px;
+        flex-flow: column nowrap;
+    }
+
+    body > aside{
+        display: none;
+    }
+    article > section{
+        flex: 1 1 100%;
+        margin-bottom: 30px;
+        background-color: chocolate;
+    }
+    
+}
+
+@media only screen and (min-width:481px) and (max-width:600px)  {
+    body > header{
+        flex: 0 0 100%;
+    }
+
+    header > nav{
+        margin-top: 28px;
+        flex-flow: column nowrap;
+    }
+
+    body > footer{
+        flex: 0 0 100%;
+    }
+
+    body > article{
+        flex: 1 1 250px;
+        
+    }
+
+    body > aside{
+        flex: 1 0 15%;
+    }
+    
+    article > section.item1, article > section.item2{
+        flex: 0 0 100px;
+        margin-bottom: 30px; 
+        text-align: center;
+        background-color: yellow;
+        
+    }
+
+    article > section.item3{
+        align-self: flex-end;
+    }
+
+
+    article > section.item3{
+        flex: 1 0 200px;
+        align-self: center;
+        text-align: center;
+        background-color: yellow;
+    }
+
+    
+    
+}
+
+@media only screen and (min-width:768px) {
+    body > header{
+        flex: 0 0 100%;
+    }
+
+    body > footer{
+        flex: 0 0 100%;
+    }
+
+    body > article{
+        flex: 3 1 400px;
+    }
+
+    body > aside{
+        flex: 1 0 15%;
+    }
+
+    article > section{
+        background-color: chartreuse;
+    }
+    header > nav{
+        margin-top: 42px;
+        flex-flow: row wrap;
+        align-items:center;
+    }
+
+    nav > div{
+        flex: 1 1 130px;
+    }
+
+    
+}
+
+
+
+
+
+/* body>header, body>footer{
+    background-color: aqua;
+    padding: 8px;
+    flex: 1 100%;
+}
+
+article{
+    flex: 3 1 130px;
+    background-color: brown;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 2em;
+}
+
+
+
+article > section{
+    background-color: green;
+    border: dashed red;
+    flex: 1 1 130px;
+}
+
+aside{
+    flex: 1 1 100px;
+    background-color: orange;
+} */
+
+
+
+
+
